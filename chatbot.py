@@ -1,6 +1,6 @@
 from youtube_transcript_api._api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import TranscriptsDisabled
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from googletrans import Translator
@@ -66,6 +66,7 @@ def get_response(transcript, question):
     })
     main_chain = parallel_chain | prompt | model | parser
     return main_chain.invoke(question)
+
 
 
 
