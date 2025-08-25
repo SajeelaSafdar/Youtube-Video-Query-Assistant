@@ -1,4 +1,11 @@
 streamlit
 youtube-transcript-api
-googletrans==4.0.0-rc1
 langchain
+langchain-text-splitters
+langchain-huggingface
+langchain-community
+langchain-core
+deep-translator
+googletrans==4.0.0-rc1
+faiss-cpu
+python-dotenv
